@@ -5,13 +5,13 @@ import imageio
 import os
 
 # ===============================
-# 📂 Setup project directories
+# Setup project directories
 # ===============================
 os.makedirs('docs', exist_ok=True)
 os.makedirs('results', exist_ok=True)
 
 # ===============================
-# ⚙️ Parameters
+# Parameters
 # ===============================
 GRID_SIZE = 50          # Grid is GRID_SIZE x GRID_SIZE
 ALIVE_PROB = 0.2        # Probability a cell starts alive
@@ -22,7 +22,7 @@ INTERVAL = 200          # Time between frames (ms)
 grid = np.random.choice([0, 1], size=(GRID_SIZE, GRID_SIZE), p=[1-ALIVE_PROB, ALIVE_PROB])
 
 # ===============================
-# 🔁 Update function for animation
+# Update function for animation
 # ===============================
 def update(frameNum, img, grid, frames_list):
     newGrid = grid.copy()
@@ -54,7 +54,7 @@ def update(frameNum, img, grid, frames_list):
     return img,
 
 # ===============================
-# 🎥 Visualization & Animation
+# Visualization & Animation
 # ===============================
 frames_list = []
 
@@ -76,8 +76,8 @@ with imageio.get_writer(gif_path, mode='I', duration=INTERVAL/1000) as writer:
     for f in frames_list:
         writer.append_data((f * 255).astype(np.uint8))
 
-print(f"✅ Simulation snapshot saved at: {final_snapshot}")
-print(f"✅ GIF animation saved at: {gif_path}")
+print(f"Simulation snapshot saved at: {final_snapshot}")
+print(f"GIF animation saved at: {gif_path}")
 
 # Show animation
 plt.show()
