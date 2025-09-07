@@ -21,7 +21,7 @@ Cellular-Automaton/
 ├── docs/                   # Saved images / GIFs (sample_simulation.png, simulation.gif)
 ├── results/                # Optional: saved states or CSV exports
 └── LICENSE (optional)
-
+```
 ## 📘 Learn More
 - [Conway’s Game of Life (Wikipedia)](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 - [Cellular Automaton Basics](https://mathworld.wolfram.com/CellularAutomaton.html)
